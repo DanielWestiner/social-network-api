@@ -14,7 +14,7 @@ module.exports = {
 
   // Get a single user
   getSingleUser(req, res) {
-    User.findOne({ _id: req.params.studentId })
+    User.findOne({ _id: req.params.id })
       .select('-__v')
       .then(userData => res.json(userData))
       .catch((err) => {
